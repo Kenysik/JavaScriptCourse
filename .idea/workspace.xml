@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e724e36e-e600-40c5-925f-a72d68d70b1f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Lesson1/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson1/index.html" afterDir="false" />
-    </list>
+    <list default="true" id="e724e36e-e600-40c5-925f-a72d68d70b1f" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/JSCourse/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -213,12 +211,12 @@
       <option name="presentableId" value="Default" />
       <updated>1568201655491</updated>
       <workItem from="1568201656944" duration="6984000" />
-      <workItem from="1568814864498" duration="237000" />
+      <workItem from="1568814864498" duration="839000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7221000" />
+    <option name="totallyTimeSpent" value="7823000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
