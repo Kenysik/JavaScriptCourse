@@ -33,13 +33,33 @@ for (let i = 0; i < 2; i++){
 
 }
 
-appData.moneyPerDay = appData.budget / 30;
-alert("Money per day:" + appData.moneyPerDay);
+detectDayBudget();
+detectLevel();
+chooseOptExpenses();
 
-if (appData.moneyPerDay < 100){
-    console.log("Minimum level of income");
-} else if (appData.moneyPerDay >= 100 && appData.moneyPerDay < 1000) {
-    console.log("Middle level of income");
-} else if (appData.moneyPerDay >= 1000) {
-    console.log("High level of income");
-} else console.log("Some error occured");
+function detectDayBudget() {
+    appData.moneyPerDay = appData.budget / 30;
+    alert("Money per day:" + appData.moneyPerDay);
+}
+
+function detectLevel() {
+    if (appData.moneyPerDay < 100){
+        console.log("Minimum level of income");
+    } else if (appData.moneyPerDay >= 100 && appData.moneyPerDay < 1000) {
+        console.log("Middle level of income");
+    } else if (appData.moneyPerDay >= 1000) {
+        console.log("High level of income");
+    } else console.log("Some error occured");
+}
+
+function chooseOptExpenses() {
+    for (let i = 0; i < 3; i++) {
+        let a = +prompt("What summ of money is needed for optional expences?");
+        if (typeof (a) != null && a != "") {
+            console.log("done");
+            appData.optionalExpenses[i] = a;
+        }
+    }
+    console.log(appData.optionalExpenses)
+}
+
