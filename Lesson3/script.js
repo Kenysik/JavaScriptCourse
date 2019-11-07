@@ -10,7 +10,7 @@ showFirstMessage("Some text");*/
     return (a + b);
 }*/
 
-let calc = (a,b) => a+b
+/*let calc = (a,b) => a+b
 
 console.log (calc(3,4));
 console.log (calc(7,4));
@@ -20,4 +20,28 @@ function retVar(){
     return num;
 }
 
-let anotherNum = retVar();
+let anotherNum = retVar();*/
+/*
+function first(){
+    setTimeout(function () {
+        console.log(1);
+    }, 500);
+}
+
+function second(){
+    console.log(2);
+}
+
+first();
+second();*/
+
+function learnJS(lang, callback){
+    console.log("I'm learning " + lang);
+    callback();
+}
+
+function done(){
+    console.log("I've done the third lesson!");
+}
+
+learnJS("JavaScript", done)

@@ -1,5 +1,15 @@
-let budget = +prompt("Enter your month budget");
-let date = prompt("Enter date in the format YYYY-MM-DD");
+let budget, date;
+
+function start(){
+    budget = +prompt("Enter your month budget");
+    date = prompt("Enter date in the format YYYY-MM-DD");
+
+    while(isNaN(budget) ||budget=="" || budget==null){
+        budget = +prompt("Enter your month budget");
+    }
+}
+
+start();
 
 let appData = {
     budget: budget,
@@ -7,7 +17,7 @@ let appData = {
     optionalExpenses: {},
     income: [],
     timeData: date,
-    savings: false
+    savings: true
 }
 
 /*a1 = prompt("Enter required expences this months");
@@ -18,27 +28,30 @@ a21 = prompt("What summ of money is needed?");
 appData.expenses.a1 = a11;
 appData.expenses.a2 = a21;*/
 
-for (let i = 0; i < 2; i++){
-    let a = prompt("Enter required expences this months"),
-        b = +prompt("What summ of money is needed?");
-    if (typeof (a) === 'string' && typeof (a) != null && typeof (b) != null
-                    && a != "" && b != "" && a.length < 50) {
-        console.log ("done");
-        appData.expenses[a] = b;
-    }
+function chooseExpences(){
+    for (let i = 0; i < 2; i++){
+        let a = prompt("Enter required expences this months"),
+            b = +prompt("What summ of money is needed?");
+        if (typeof (a) === 'string' && typeof (a) != null && typeof (b) != null
+            && a != "" && b != "" && a.length < 50) {
+            console.log ("done");
+            appData.expenses[a] = b;
+        }
+}
+
 /*    else {
         i--;
         continue;
     }*/
 
 }
-
+chooseExpences();
 detectDayBudget();
 detectLevel();
 chooseOptExpenses();
 
 function detectDayBudget() {
-    appData.moneyPerDay = appData.budget / 30;
+    appData.moneyPerDay = (appData.budget / 30).toFixed(2);
     alert("Money per day:" + appData.moneyPerDay);
 }
 
@@ -62,4 +75,15 @@ function chooseOptExpenses() {
     }
     console.log(appData.optionalExpenses)
 }
+
+function checkSavings() {
+    if (appData.savings == true){
+        let save = +prompt("What summ of savings do you have?"),
+            percent = +prompt("What percent?");
+        appData.monthIncome = save/100/12*percent;
+        alert("Your monthly income is: " + appData.monthIncome);
+    }
+}
+
+checkSavings();
 
