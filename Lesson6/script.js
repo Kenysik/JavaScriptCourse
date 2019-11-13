@@ -12,7 +12,7 @@ btn[0].onclick = function(){
 };*/
 
 btn[0].addEventListener('click', function(event){
-    //alert('You pressed the 1st button');
+    //alert('You pressed the 1st button');gh
     //console.log(event);
     //let target = event.target;
     //target.style.display = 'none';
