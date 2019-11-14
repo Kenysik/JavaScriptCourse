@@ -1,11 +1,11 @@
 let budget, date;
 
 function start(){
-    budget = +prompt("Enter your month budget");
-    date = prompt("Enter date in the format YYYY-MM-DD");
+    budget = +prompt("Enter your month money");
+    date = prompt("Enter time in the format YYYY-MM-DD");
 
     while(isNaN(budget) ||budget=="" || budget==null){
-        budget = +prompt("Enter your month budget");
+        budget = +prompt("Enter your month money");
     }
 }
 
